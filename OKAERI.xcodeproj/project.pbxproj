@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		192CED1E253878C90087E38F /* OKAERIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CED1D253878C90087E38F /* OKAERIApp.swift */; };
+		192CED20253878C90087E38F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CED1F253878C90087E38F /* ContentView.swift */; };
+		192CED22253878CA0087E38F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192CED21253878CA0087E38F /* Assets.xcassets */; };
+		192CED25253878CA0087E38F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192CED24253878CA0087E38F /* Preview Assets.xcassets */; };
+		192CED27253878CA0087E38F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CED26253878CA0087E38F /* Persistence.swift */; };
+		192CED2A253878CA0087E38F /* OKAERI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 192CED28253878CA0087E38F /* OKAERI.xcdatamodeld */; };
+		192CED35253878CA0087E38F /* OKAERITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CED34253878CA0087E38F /* OKAERITests.swift */; };
+		192CED40253878CA0087E38F /* OKAERIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CED3F253878CA0087E38F /* OKAERIUITests.swift */; };
+		192CED51253879A90087E38F /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CED50253879A90087E38F /* HealthStore.swift */; };
+		192CED582538835B0087E38F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192CED572538835B0087E38F /* HealthKit.framework */; };
+		192CEDE3253C78030087E38F /* MockServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 192CEDE2253C78030087E38F /* MockServerResponse.json */; };
+		192CEDF5253C790A0087E38F /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CEDF4253C790A0087E38F /* Step.swift */; };
+		192CEE18253EE8A60087E38F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CEE17253EE8A60087E38F /* UIView.swift */; };
+		192CEE1D253EE9290087E38F /* statusbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CEE1C253EE9290087E38F /* statusbar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		192CED31253878CA0087E38F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 192CED12253878C90087E38F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 192CED19253878C90087E38F;
+			remoteInfo = OKAERI;
+		};
+		192CED3C253878CA0087E38F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 192CED12253878C90087E38F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 192CED19253878C90087E38F;
+			remoteInfo = OKAERI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		192CED1A253878C90087E38F /* OKAERI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OKAERI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		192CED1D253878C90087E38F /* OKAERIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAERIApp.swift; sourceTree = "<group>"; };
+		192CED1F253878C90087E38F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		192CED21253878CA0087E38F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		192CED24253878CA0087E38F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		192CED26253878CA0087E38F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		192CED29253878CA0087E38F /* OKAERI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OKAERI.xcdatamodel; sourceTree = "<group>"; };
+		192CED2B253878CA0087E38F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		192CED30253878CA0087E38F /* OKAERITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OKAERITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		192CED34253878CA0087E38F /* OKAERITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAERITests.swift; sourceTree = "<group>"; };
+		192CED36253878CA0087E38F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		192CED3B253878CA0087E38F /* OKAERIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OKAERIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		192CED3F253878CA0087E38F /* OKAERIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAERIUITests.swift; sourceTree = "<group>"; };
+		192CED41253878CA0087E38F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		192CED50253879A90087E38F /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		192CED552538835A0087E38F /* OKAERI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OKAERI.entitlements; sourceTree = "<group>"; };
+		192CED572538835B0087E38F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		192CEDE2253C78030087E38F /* MockServerResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockServerResponse.json; sourceTree = "<group>"; };
+		192CEDF4253C790A0087E38F /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		192CEE17253EE8A60087E38F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		192CEE1C253EE9290087E38F /* statusbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusbar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		192CED17253878C90087E38F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				192CED582538835B0087E38F /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		192CED2D253878CA0087E38F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		192CED38253878CA0087E38F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		192CED11253878C90087E38F = {
+			isa = PBXGroup;
+			children = (
+				192CED1C253878C90087E38F /* OKAERI */,
+				192CED33253878CA0087E38F /* OKAERITests */,
+				192CED3E253878CA0087E38F /* OKAERIUITests */,
+				192CED1B253878C90087E38F /* Products */,
+				192CED562538835B0087E38F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		192CED1B253878C90087E38F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				192CED1A253878C90087E38F /* OKAERI.app */,
+				192CED30253878CA0087E38F /* OKAERITests.xctest */,
+				192CED3B253878CA0087E38F /* OKAERIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		192CED1C253878C90087E38F /* OKAERI */ = {
+			isa = PBXGroup;
+			children = (
+				192CED6225388BA10087E38F /* Models */,
+				192CED552538835A0087E38F /* OKAERI.entitlements */,
+				192CED1D253878C90087E38F /* OKAERIApp.swift */,
+				192CED1F253878C90087E38F /* ContentView.swift */,
+				192CEE1C253EE9290087E38F /* statusbar.swift */,
+				192CEE17253EE8A60087E38F /* UIView.swift */,
+				192CED50253879A90087E38F /* HealthStore.swift */,
+				192CED21253878CA0087E38F /* Assets.xcassets */,
+				192CED26253878CA0087E38F /* Persistence.swift */,
+				192CED2B253878CA0087E38F /* Info.plist */,
+				192CED28253878CA0087E38F /* OKAERI.xcdatamodeld */,
+				192CED23253878CA0087E38F /* Preview Content */,
+			);
+			path = OKAERI;
+			sourceTree = "<group>";
+		};
+		192CED23253878CA0087E38F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				192CED24253878CA0087E38F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		192CED33253878CA0087E38F /* OKAERITests */ = {
+			isa = PBXGroup;
+			children = (
+				192CED34253878CA0087E38F /* OKAERITests.swift */,
+				192CED36253878CA0087E38F /* Info.plist */,
+			);
+			path = OKAERITests;
+			sourceTree = "<group>";
+		};
+		192CED3E253878CA0087E38F /* OKAERIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				192CED3F253878CA0087E38F /* OKAERIUITests.swift */,
+				192CED41253878CA0087E38F /* Info.plist */,
+			);
+			path = OKAERIUITests;
+			sourceTree = "<group>";
+		};
+		192CED562538835B0087E38F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				192CED572538835B0087E38F /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		192CED6225388BA10087E38F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				192CEDF4253C790A0087E38F /* Step.swift */,
+				192CEDE2253C78030087E38F /* MockServerResponse.json */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		192CED19253878C90087E38F /* OKAERI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 192CED44253878CA0087E38F /* Build configuration list for PBXNativeTarget "OKAERI" */;
+			buildPhases = (
+				192CED16253878C90087E38F /* Sources */,
+				192CED17253878C90087E38F /* Frameworks */,
+				192CED18253878C90087E38F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OKAERI;
+			productName = OKAERI;
+			productReference = 192CED1A253878C90087E38F /* OKAERI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		192CED2F253878CA0087E38F /* OKAERITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 192CED47253878CA0087E38F /* Build configuration list for PBXNativeTarget "OKAERITests" */;
+			buildPhases = (
+				192CED2C253878CA0087E38F /* Sources */,
+				192CED2D253878CA0087E38F /* Frameworks */,
+				192CED2E253878CA0087E38F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				192CED32253878CA0087E38F /* PBXTargetDependency */,
+			);
+			name = OKAERITests;
+			productName = OKAERITests;
+			productReference = 192CED30253878CA0087E38F /* OKAERITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		192CED3A253878CA0087E38F /* OKAERIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 192CED4A253878CA0087E38F /* Build configuration list for PBXNativeTarget "OKAERIUITests" */;
+			buildPhases = (
+				192CED37253878CA0087E38F /* Sources */,
+				192CED38253878CA0087E38F /* Frameworks */,
+				192CED39253878CA0087E38F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				192CED3D253878CA0087E38F /* PBXTargetDependency */,
+			);
+			name = OKAERIUITests;
+			productName = OKAERIUITests;
+			productReference = 192CED3B253878CA0087E38F /* OKAERIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		192CED12253878C90087E38F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					192CED19253878C90087E38F = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					192CED2F253878CA0087E38F = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 192CED19253878C90087E38F;
+					};
+					192CED3A253878CA0087E38F = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 192CED19253878C90087E38F;
+					};
+				};
+			};
+			buildConfigurationList = 192CED15253878C90087E38F /* Build configuration list for PBXProject "OKAERI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 192CED11253878C90087E38F;
+			productRefGroup = 192CED1B253878C90087E38F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				192CED19253878C90087E38F /* OKAERI */,
+				192CED2F253878CA0087E38F /* OKAERITests */,
+				192CED3A253878CA0087E38F /* OKAERIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		192CED18253878C90087E38F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				192CED25253878CA0087E38F /* Preview Assets.xcassets in Resources */,
+				192CEDE3253C78030087E38F /* MockServerResponse.json in Resources */,
+				192CED22253878CA0087E38F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		192CED2E253878CA0087E38F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		192CED39253878CA0087E38F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		192CED16253878C90087E38F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				192CED27253878CA0087E38F /* Persistence.swift in Sources */,
+				192CED51253879A90087E38F /* HealthStore.swift in Sources */,
+				192CED20253878C90087E38F /* ContentView.swift in Sources */,
+				192CEE1D253EE9290087E38F /* statusbar.swift in Sources */,
+				192CEE18253EE8A60087E38F /* UIView.swift in Sources */,
+				192CEDF5253C790A0087E38F /* Step.swift in Sources */,
+				192CED2A253878CA0087E38F /* OKAERI.xcdatamodeld in Sources */,
+				192CED1E253878C90087E38F /* OKAERIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		192CED2C253878CA0087E38F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				192CED35253878CA0087E38F /* OKAERITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		192CED37253878CA0087E38F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				192CED40253878CA0087E38F /* OKAERIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		192CED32253878CA0087E38F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 192CED19253878C90087E38F /* OKAERI */;
+			targetProxy = 192CED31253878CA0087E38F /* PBXContainerItemProxy */;
+		};
+		192CED3D253878CA0087E38F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 192CED19253878C90087E38F /* OKAERI */;
+			targetProxy = 192CED3C253878CA0087E38F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		192CED42253878CA0087E38F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		192CED43253878CA0087E38F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		192CED45253878CA0087E38F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OKAERI/OKAERI.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = BZYP8TGP6F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = OKAERI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachi.oka.OKAERI2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		192CED46253878CA0087E38F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OKAERI/OKAERI.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = BZYP8TGP6F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = OKAERI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachi.oka.OKAERI2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		192CED48253878CA0087E38F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZYP8TGP6F;
+				INFOPLIST_FILE = OKAERITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachi.oka.OKAERITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OKAERI.app/OKAERI";
+			};
+			name = Debug;
+		};
+		192CED49253878CA0087E38F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZYP8TGP6F;
+				INFOPLIST_FILE = OKAERITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachi.oka.OKAERITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OKAERI.app/OKAERI";
+			};
+			name = Release;
+		};
+		192CED4B253878CA0087E38F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZYP8TGP6F;
+				INFOPLIST_FILE = OKAERIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachi.oka.OKAERIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OKAERI;
+			};
+			name = Debug;
+		};
+		192CED4C253878CA0087E38F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZYP8TGP6F;
+				INFOPLIST_FILE = OKAERIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachi.oka.OKAERIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OKAERI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		192CED15253878C90087E38F /* Build configuration list for PBXProject "OKAERI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				192CED42253878CA0087E38F /* Debug */,
+				192CED43253878CA0087E38F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		192CED44253878CA0087E38F /* Build configuration list for PBXNativeTarget "OKAERI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				192CED45253878CA0087E38F /* Debug */,
+				192CED46253878CA0087E38F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		192CED47253878CA0087E38F /* Build configuration list for PBXNativeTarget "OKAERITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				192CED48253878CA0087E38F /* Debug */,
+				192CED49253878CA0087E38F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		192CED4A253878CA0087E38F /* Build configuration list for PBXNativeTarget "OKAERIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				192CED4B253878CA0087E38F /* Debug */,
+				192CED4C253878CA0087E38F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		192CED28253878CA0087E38F /* OKAERI.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				192CED29253878CA0087E38F /* OKAERI.xcdatamodel */,
+			);
+			currentVersion = 192CED29253878CA0087E38F /* OKAERI.xcdatamodel */;
+			path = OKAERI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 192CED12253878C90087E38F /* Project object */;
+}
