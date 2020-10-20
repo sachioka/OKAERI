@@ -146,7 +146,7 @@ struct ContentView: View {
                                         .frame(alignment: .center);
                                     Spacer()
                                     }.frame(height:300)
-                                    .opacity(0.2)
+                                    .opacity(0.5)
  
                 }
 
