@@ -43,10 +43,11 @@ struct ContentView: View {
             let step = Step(count: Int(count ?? 0),date: statistics.startDate)
             steps.append(step)
             
-            print(steps.count)
+
             //startDateからendDateまでの日々の歩数をsteps配列に追加する
             
         }
+        print(steps)
      }
     
     
@@ -85,103 +86,96 @@ struct ContentView: View {
 //        print(aveWeekSteps)
     
     }
-    private func backgoudColor (){
-        
-    }
-    
-    
-//MARK:-body
-    
-    
-
-    var body: some View {
-        let yellow = Color(red: 248/255, green: 187/255, blue: 119/255)
-        let pink = Color(red: 240/255, green: 154/255, blue: 127/255)
-        let blue = Color(red: 184/255, green: 208/255, blue: 127/255)
+//    private func backgoudColorSelection ()->Color{
+//        let yellow = Color(red: 248/255, green: 187/255, blue: 119/255)
 //        let pink = Color(red: 240/255, green: 154/255, blue: 127/255)
+//        let blue = Color(red: 184/255, green: 208/255, blue: 127/255)
+//
+//        if (thanWeek && thanMonth){
+//            return
+//        }else if thanWeek && !thanMonth {
+//        }else if !thanWeek && thanMonth {
+//        }else {
+//        }
+//    }
+   private func backgroundColorSet(color1:Color,color2:Color){
+        LinearGradient(gradient: Gradient(colors: [color1,color2]), startPoint: .top, endPoint: .trailing)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.all)
+    }
+    //edgesIgnoringSafeArea 画面いっぱいに広げるやつ
+    
+    //MARK:-body
+    
+    
+    
+    var body: some View {
 
+        //        let pink = Color(red: 240/255, green: 154/255, blue: 127/255)
+        Group{
+//        var bgcs = backgroundColorSet(color1:.black,color2:.white)
+            LinearGradient(gradient: Gradient(colors: [.blue,.clear]), startPoint: .top, endPoint: .trailing)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .edgesIgnoringSafeArea(.all)
+        }
         VStack{
             ZStack {
                 Text("test")
-            if (thanWeek && thanMonth){
-                Text("test")
-                LinearGradient(gradient: Gradient(colors: [blue,.white]), startPoint: .leading, endPoint: .trailing)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)    // フレームサイズを最大に設定
-                    .edgesIgnoringSafeArea(.all)
-                
-            }else if thanWeek && !thanMonth {
-                LinearGradient(gradient: Gradient(colors: [blue, yellow]), startPoint: .top, endPoint: .trailing)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .edgesIgnoringSafeArea(.all)
-                
-                
-                
-            }else if !thanWeek && thanMonth {
-                LinearGradient(gradient: Gradient(colors: [yellow, pink]), startPoint: .top, endPoint: .trailing)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .edgesIgnoringSafeArea(.all)
-                
-            }else {
-
-                LinearGradient(gradient: Gradient(colors: [pink, .white]), startPoint: .top, endPoint: .trailing)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .edgesIgnoringSafeArea(.all)
                 VStack{
-                Text("test")
+                    Text("test")
                     if (Butonclick==true) {
                         Text("\(steps.count)")
-                                        } else {
-                                            
-                                       }
+                    } else {
+                        
+                    }
 
-                                    List {
-                                    Button(action: {
-                                            self.Butonclick = true}) {
-                    //                             ここにタスク全て表示
-                                        Text("タスク")
-                                                .foregroundColor(Color.white)
-                                                .padding()
-                                                .background(Color.red)
-                                                .cornerRadius(100)}
-                                        .frame(alignment: .center);
-                                    Spacer()
-                                    }.frame(height:300)
-                                    .opacity(0.5)
- 
+                    List {
+                        Button(action: {
+                                self.Butonclick = true}) {
+                            //                             ここにタスク全て表示
+                            Text("タスク")
+                                .foregroundColor(Color.white)
+                                .padding()
+                                .background(Color.red)
+                                .cornerRadius(100)}
+                            .frame(alignment: .center);
+                        Spacer()
+                    }.frame(height:300)
+                    .opacity(0.5)
+                    
                 }
-
+                
+                
             }
-            }
-//            Text("test")
-
-        }
-    
-        
+            //            Text("test")
             
-
-
+        
+        }
+        
+        
+        
         
         //このviewが表示されたらおこわなれることが以下（.onappear）
-            .onAppear{
-                if let healthStore = healthStore  {
-                    healthStore.requestAuthorization { success in
-                     //heathcareに対する許可（今回は読み込み）されていればHealthStore.swift のcalculateStpsファンクションを実行
-                        if success {
-                            healthStore.calculateStps{ statisticsCollection in
-                                if let statisticsCollection = statisticsCollection {
-                                    DispatchQueue.main.async {
-                                      updateUIFromStatistics(statisticsCollection)
-                                        checkFatigue()
-                                    }
-//                                    updateUIFromStatistics(statisticsCollection)
+        .onAppear{
+            if let healthStore = healthStore  {
+                healthStore.requestAuthorization { success in
+                    //heathcareに対する許可（今回は読み込み）されていればHealthStore.swift のcalculateStpsファンクションを実行
+                    if success {
+                        healthStore.calculateStps{ statisticsCollection in
+                            if let statisticsCollection = statisticsCollection {
+                                DispatchQueue.main.async {
+                                    updateUIFromStatistics(statisticsCollection)
+                                    checkFatigue()
                                 }
+                                //                                    updateUIFromStatistics(statisticsCollection)
                             }
-                            
-                            
                         }
+                        
+                        
                     }
                 }
             }
+        }
     }
 }
 
