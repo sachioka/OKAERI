@@ -18,6 +18,7 @@ struct ContentView: View {
     @State var thanMonth :Bool = true
     @State var thanWeek :Bool = true
     @State private var Butonclick = false
+
     
     //@stateは変数の変更を行うために必要
     
@@ -31,7 +32,7 @@ struct ContentView: View {
     private func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection) {
 
         let startDate = Calendar.current.date(byAdding: .day, value: -30 , to: Date())!
-//        let startDate = Date()
+
         
         let endDate = Date()
         
@@ -43,11 +44,12 @@ struct ContentView: View {
             let step = Step(count: Int(count ?? 0),date: statistics.startDate)
             steps.append(step)
             
-
+//            print(steps)
+            
             //startDateからendDateまでの日々の歩数をsteps配列に追加する
             
         }
-        print(steps)
+
      }
     
     
@@ -70,54 +72,54 @@ struct ContentView: View {
         
         thanMonth = (steps[0].count > aveMonthSteps)
         thanWeek = (steps[0].count > aveWeekSteps)
-       
-//        switch (thanWeek,thanMonth)   {
-//                case (true,true):
-//                 return
-//                case (true,false):
-//                 return Color.green
-//                case (false,true)
-//
-//                default :
-//                  return  Color.blue
-//        }
+
+
+    
+    }
+
+    
+    //MARK:-parts1
+    private func changeBackgroudColor(n:Bool,_n:Bool) ->LinearGradient{
+        var max = Color(red: 105/255, green: 170/255, blue: 0/255)
+        var mid1 = Color(red: 148/255, green: 208/255, blue: 173/255)
+        var mid2 = Color(red: 182/255, green: 247/255, blue: 72/255)
+        var min = Color(red: 166/255, green: 181/255, blue: 186/255)
+        var white = Color(red: 250/255, green: 250/255, blue: 250/255)
         
-//        print(steps)
-//        print(aveWeekSteps)
-    
-    }
-//    private func backgoudColorSelection ()->Color{
-//        let yellow = Color(red: 248/255, green: 187/255, blue: 119/255)
-//        let pink = Color(red: 240/255, green: 154/255, blue: 127/255)
-//        let blue = Color(red: 184/255, green: 208/255, blue: 127/255)
+        if (n && _n){
+            print("1")
+            return LinearGradient(gradient: Gradient(colors:[min, white]), startPoint: .top, endPoint: .trailing)
+
+        }else if (n && !_n){
+            print("2")
+            return LinearGradient(gradient: Gradient(colors:[mid1,white]), startPoint: .top, endPoint: .trailing)
+
+        }else if (!n && _n){
+            print("3")
+            return LinearGradient(gradient: Gradient(colors:[mid2, white]), startPoint: .top, endPoint: .trailing)
+
+        }else if (!n && !_n){
+            print("4")
+            return LinearGradient(gradient: Gradient(colors:[min, white]), startPoint: .top, endPoint: .trailing)
+
+        }
 //
-//        if (thanWeek && thanMonth){
-//            return
-//        }else if thanWeek && !thanMonth {
-//        }else if !thanWeek && thanMonth {
-//        }else {
-//        }
-//    }
-   private func backgroundColorSet(color1:Color,color2:Color){
-        LinearGradient(gradient: Gradient(colors: [color1,color2]), startPoint: .top, endPoint: .trailing)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .edgesIgnoringSafeArea(.all)
+        print("5")
+        return LinearGradient(gradient: Gradient(colors:[min, .white]), startPoint: .top, endPoint: .trailing)
+
     }
+//MARK:-parts1-end
     //edgesIgnoringSafeArea 画面いっぱいに広げるやつ
-    
-    //MARK:-body
     
     
     
     var body: some View {
-
-        //        let pink = Color(red: 240/255, green: 154/255, blue: 127/255)
-        Group{
-//        var bgcs = backgroundColorSet(color1:.black,color2:.white)
-            LinearGradient(gradient: Gradient(colors: [.blue,.clear]), startPoint: .top, endPoint: .trailing)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.all)
-        }
+//MARK:-parts2
+    changeBackgroudColor(n:thanWeek,_n:thanMonth)
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .edgesIgnoringSafeArea(.all)
+//MARK:-parts2-end
+        
         VStack{
             ZStack {
                 Text("test")
@@ -147,7 +149,7 @@ struct ContentView: View {
                 
                 
             }
-            //            Text("test")
+                        Text("test")
             
         
         }
