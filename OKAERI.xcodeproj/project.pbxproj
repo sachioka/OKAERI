@@ -19,8 +19,6 @@
 		192CED582538835B0087E38F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192CED572538835B0087E38F /* HealthKit.framework */; };
 		192CEDE3253C78030087E38F /* MockServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 192CEDE2253C78030087E38F /* MockServerResponse.json */; };
 		192CEDF5253C790A0087E38F /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CEDF4253C790A0087E38F /* Step.swift */; };
-		192CEE18253EE8A60087E38F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CEE17253EE8A60087E38F /* UIView.swift */; };
-		192CEE1D253EE9290087E38F /* statusbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CEE1C253EE9290087E38F /* statusbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +58,6 @@
 		192CED572538835B0087E38F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		192CEDE2253C78030087E38F /* MockServerResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockServerResponse.json; sourceTree = "<group>"; };
 		192CEDF4253C790A0087E38F /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
-		192CEE17253EE8A60087E38F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		192CEE1C253EE9290087E38F /* statusbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +114,6 @@
 				192CED552538835A0087E38F /* OKAERI.entitlements */,
 				192CED1D253878C90087E38F /* OKAERIApp.swift */,
 				192CED1F253878C90087E38F /* ContentView.swift */,
-				192CEE1C253EE9290087E38F /* statusbar.swift */,
-				192CEE17253EE8A60087E38F /* UIView.swift */,
 				192CED50253879A90087E38F /* HealthStore.swift */,
 				192CED21253878CA0087E38F /* Assets.xcassets */,
 				192CED26253878CA0087E38F /* Persistence.swift */,
@@ -306,8 +300,6 @@
 				192CED27253878CA0087E38F /* Persistence.swift in Sources */,
 				192CED51253879A90087E38F /* HealthStore.swift in Sources */,
 				192CED20253878C90087E38F /* ContentView.swift in Sources */,
-				192CEE1D253EE9290087E38F /* statusbar.swift in Sources */,
-				192CEE18253EE8A60087E38F /* UIView.swift in Sources */,
 				192CEDF5253C790A0087E38F /* Step.swift in Sources */,
 				192CED2A253878CA0087E38F /* OKAERI.xcdatamodeld in Sources */,
 				192CED1E253878C90087E38F /* OKAERIApp.swift in Sources */,
