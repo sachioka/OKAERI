@@ -139,7 +139,9 @@ struct ContentView: View {
                 ZStack{
                     
                     Text("おかえりなさい")
-                        Text()
+                    Text("今日もお疲れ様でした。")
+                    Text("今日は\(steps[0].count) 歩あるきました")
+
                         
                         .listRowBackground(changeBackgroudColor(n:thanWeek,_n:thanMonth))
                     List{
