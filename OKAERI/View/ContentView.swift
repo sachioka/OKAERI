@@ -66,7 +66,7 @@ struct ContentView: View {
     }
     
     
-    private func checkFatigue() {
+     func checkFatigue() {
         
         var sumWeekSteps:Int = 0
         var sumMonthSteps:Int = 0
@@ -129,50 +129,41 @@ struct ContentView: View {
 //    .edgesIgnoringSafeArea(.all)
     
     var body: some View {
-        var selectedColor = changeBackgroudColor(n:thanWeek,_n:thanMonth)
-
+        
+        
         
         VStack{
             
             TabView(selection:$selection){
                 
                 ZStack{
-                    
-                    Text("おかえりなさい")
-                    Text("今日もお疲れ様でした。")
-                    Text("今日は\(steps[0].count) 歩あるきました")
-
-                        
-                        .listRowBackground(changeBackgroudColor(n:thanWeek,_n:thanMonth))
+                    changeBackgroudColor(n:thanWeek,_n:thanMonth)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .edgesIgnoringSafeArea(.all)
                     List{
                         
                         ForEach(tasks){ task in
                             Button(action: {
                                 self.updateTask(task)
-                                
                             }){
                                 TaskRow(task: task)
-                                
                             }
-                            
                         }
-                        .padding(20)
                     }
-                    
-                    .tabItem{
-                        Text("addTask")
-                    }
-                    
+                    .padding(20)
                 }
                 
-                .tag(0)
+                .tabItem{
+                    Text("TaskLisst")
+                }
+                .tag(1)
                 VStack{
                     TaskList()
                 }
                 .tabItem{
-                    Text("selectTask")
+                    Text("AddTask")
+                        .font(.largeTitle)
                 }
-                
                 .tag(2)
                 
             }
@@ -190,7 +181,6 @@ struct ContentView: View {
                                 DispatchQueue.main.async {
                                     updateUIFromStatistics(statisticsCollection)
                                     checkFatigue()
-                                    changeBackgroudColor(n:thanWeek,_n:thanMonth)
                                 }
                                 //                                    updateUIFromStatistics(statisticsCollection)
                             }
@@ -216,6 +206,7 @@ struct ContentView: View {
             let test = try context.fetch(fetchRequest)
             let taskUpdate = test[0] as! NSManagedObject
             taskUpdate.setValue(isComplete, forKey: "isComplete")
+            print("updated")
         } catch {
             print(error)
         }

@@ -68,11 +68,15 @@ struct TaskList: View {
     func addTask(taskname: String, deadline: Date, isComplete: Bool) {
         
         let newTask = Task(context: managedObjectContext)
-        
+        newTask.id = UUID()
         newTask.taskname = taskname
         newTask.deadline = deadline
         newTask.isComplete = false
-        saveContext()
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print(error)
+        }
     }
     
 //    セーブ関数

@@ -20,13 +20,14 @@ struct AddTask: View {
       Form {
         Section(header: Text("Task")) {
           TextField("Task", text: $taskname)
+            .font(.title)
         }
 
         Section {
           DatePicker(
             selection: $deadline,
             displayedComponents: .date) {
-              Text("いつまで").foregroundColor(Color(.gray))
+              Text("DeadLine").foregroundColor(Color(.gray))
           }
         }
         Section {

@@ -25,12 +25,12 @@ struct TaskRow: View {
   var body: some View {
     HStack(alignment: .center) {
         task.taskname.map(Text.init)
-        .font(.title)
+        .font(.body)
         Spacer()
 //      HStack {
-        Text("期限")
+        Text("@")
         task.deadline.map { Text(Self.deadLineFormatter.string(from: $0)) }
-          .font(.headline)
+          .font(.body)
 //        Spacer()
 //        movie.deadLine.map { Text(Self.releaseFormatter.string(from: $0)) }
 //          .font(.caption)
