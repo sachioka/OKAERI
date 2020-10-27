@@ -14,6 +14,7 @@ struct OKAERIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            TaskList()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

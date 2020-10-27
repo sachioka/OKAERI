@@ -15,11 +15,11 @@ struct Step: Identifiable {
     let date: Date
 }
 
-struct StepAve: Identifiable {
-    let id = UUID()
-    let ave: Int
-    let date: Date
-}
+//struct StepAve: Identifiable {
+//    let id = UUID()
+//    let ave: Int
+//    let date: Date
+//}
 
 struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
