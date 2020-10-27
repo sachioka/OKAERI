@@ -1,4 +1,13 @@
 ////
+///
+///
+
+
+import UIKit
+var window: UIWindow?
+
+
+///
 ////  SceneDelegate.swift
 ////  OKAERI
 ////
