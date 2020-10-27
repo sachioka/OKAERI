@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -19,13 +21,24 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
-	<true/>
+	<false/>
 	<key>NSHealthShareUsageDescription</key>
 	<string>This app requires to access your health data</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>This app requires to access your health data</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>UISceneConfigurations</key>
+		<dict/>
+		<key>Application Scessin Role</key>
+		<array>
+			<dict>
+				<key>Configuration Name</key>
+				<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+				<key>Delegate Class Name</key>
+				<string>Default Configuration</string>
+			</dict>
+		</array>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<true/>
 	</dict>
