@@ -86,8 +86,9 @@ struct ContentView: View {
         thanMonth = (steps[0].count > aveMonthSteps)
         thanWeek = (steps[0].count > aveWeekSteps)
         
-        print(context)
-        print(tasks)
+        print(aveMonthSteps)
+        print(aveWeekSteps)
+        print(steps[0].count)
 
     }
     
@@ -95,7 +96,7 @@ struct ContentView: View {
     //MARK:-parts1
 
     func changeBackgroudColor(n:Bool,_n:Bool) ->LinearGradient{
-        var max = Color(red: 105/255, green: 170/255, blue: 0/255)
+        var max = Color(red: 105/255, green: 2000/255, blue: 0/255)
         var mid1 = Color(red: 148/255, green: 208/255, blue: 173/255)
         var mid2 = Color(red: 182/255, green: 247/255, blue: 72/255)
         var min = Color(red: 166/255, green: 181/255, blue: 186/255)
@@ -115,7 +116,7 @@ struct ContentView: View {
             
         }else if (!n && !_n){
             print("4")
-            return LinearGradient(gradient: Gradient(colors:[min, white]), startPoint: .top, endPoint: .trailing)
+            return LinearGradient(gradient: Gradient(colors:[max, white]), startPoint: .top, endPoint: .trailing)
             
         }
         //
@@ -135,7 +136,14 @@ struct ContentView: View {
         VStack{
             
             TabView(selection:$selection){
-                
+                VStack{
+                    TaskList()
+                }
+                .tabItem{
+                    Text("AddTask")
+                        .font(.largeTitle)
+                }
+                .tag(1)
                 ZStack{
                     changeBackgroudColor(n:thanWeek,_n:thanMonth)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -156,16 +164,7 @@ struct ContentView: View {
                 .tabItem{
                     Text("TaskLisst")
                 }
-                .tag(1)
-                VStack{
-                    TaskList()
-                }
-                .tabItem{
-                    Text("AddTask")
-                        .font(.largeTitle)
-                }
                 .tag(2)
-                
             }
             
         }
