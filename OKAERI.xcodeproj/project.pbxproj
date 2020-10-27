@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,17 @@
 		192CED582538835B0087E38F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192CED572538835B0087E38F /* HealthKit.framework */; };
 		192CEDE3253C78030087E38F /* MockServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 192CEDE2253C78030087E38F /* MockServerResponse.json */; };
 		192CEDF5253C790A0087E38F /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CEDF4253C790A0087E38F /* Step.swift */; };
+		194E021B2545C3CE00DBB1E6 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E021A2545C3CE00DBB1E6 /* AddTask.swift */; };
+		1971FE042545C683003A17E7 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971FE032545C683003A17E7 /* TaskModel.swift */; };
+		1971FE0D254676EA003A17E7 /* CareKitFHIR in Frameworks */ = {isa = PBXBuildFile; productRef = 1971FE0C254676EA003A17E7 /* CareKitFHIR */; };
+		1971FE0F254676EA003A17E7 /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1971FE0E254676EA003A17E7 /* CareKit */; };
+		1971FE11254676EA003A17E7 /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = 1971FE10254676EA003A17E7 /* CareKitStore */; };
+		1971FE13254676EA003A17E7 /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1971FE12254676EA003A17E7 /* CareKitUI */; };
+		1971FE1F2546D579003A17E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971FE1E2546D579003A17E7 /* SceneDelegate.swift */; };
+		1971FE242546D5A6003A17E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971FE232546D5A6003A17E7 /* AppDelegate.swift */; };
+		1971FE292546E5D2003A17E7 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971FE282546E5D2003A17E7 /* TaskRow.swift */; };
+		1971FE312546FCAC003A17E7 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971FE302546FCAC003A17E7 /* TaskList.swift */; };
+		1971FE3925472253003A17E7 /* SelectTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971FE3825472253003A17E7 /* SelectTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +69,13 @@
 		192CED572538835B0087E38F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		192CEDE2253C78030087E38F /* MockServerResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockServerResponse.json; sourceTree = "<group>"; };
 		192CEDF4253C790A0087E38F /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		194E021A2545C3CE00DBB1E6 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
+		1971FE032545C683003A17E7 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		1971FE1E2546D579003A17E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1971FE232546D5A6003A17E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1971FE282546E5D2003A17E7 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		1971FE302546FCAC003A17E7 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		1971FE3825472253003A17E7 /* SelectTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +83,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1971FE11254676EA003A17E7 /* CareKitStore in Frameworks */,
+				1971FE0F254676EA003A17E7 /* CareKit in Frameworks */,
+				1971FE13254676EA003A17E7 /* CareKitUI in Frameworks */,
 				192CED582538835B0087E38F /* HealthKit.framework in Frameworks */,
+				1971FE0D254676EA003A17E7 /* CareKitFHIR in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,15 +132,17 @@
 		192CED1C253878C90087E38F /* OKAERI */ = {
 			isa = PBXGroup;
 			children = (
+				1971FE4025478F09003A17E7 /* View */,
 				192CED6225388BA10087E38F /* Models */,
 				192CED552538835A0087E38F /* OKAERI.entitlements */,
+				1971FE282546E5D2003A17E7 /* TaskRow.swift */,
 				192CED1D253878C90087E38F /* OKAERIApp.swift */,
-				192CED1F253878C90087E38F /* ContentView.swift */,
 				192CED50253879A90087E38F /* HealthStore.swift */,
 				192CED21253878CA0087E38F /* Assets.xcassets */,
 				192CED26253878CA0087E38F /* Persistence.swift */,
 				192CED2B253878CA0087E38F /* Info.plist */,
 				192CED28253878CA0087E38F /* OKAERI.xcdatamodeld */,
+				199ADF5B25482CE7006DED5D /* unuse */,
 				192CED23253878CA0087E38F /* Preview Content */,
 			);
 			path = OKAERI;
@@ -163,8 +187,29 @@
 			children = (
 				192CEDF4253C790A0087E38F /* Step.swift */,
 				192CEDE2253C78030087E38F /* MockServerResponse.json */,
+				1971FE032545C683003A17E7 /* TaskModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1971FE4025478F09003A17E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1971FE302546FCAC003A17E7 /* TaskList.swift */,
+				192CED1F253878C90087E38F /* ContentView.swift */,
+				194E021A2545C3CE00DBB1E6 /* AddTask.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		199ADF5B25482CE7006DED5D /* unuse */ = {
+			isa = PBXGroup;
+			children = (
+				1971FE232546D5A6003A17E7 /* AppDelegate.swift */,
+				1971FE1E2546D579003A17E7 /* SceneDelegate.swift */,
+				1971FE3825472253003A17E7 /* SelectTask.swift */,
+			);
+			path = unuse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +228,12 @@
 			dependencies = (
 			);
 			name = OKAERI;
+			packageProductDependencies = (
+				1971FE0C254676EA003A17E7 /* CareKitFHIR */,
+				1971FE0E254676EA003A17E7 /* CareKit */,
+				1971FE10254676EA003A17E7 /* CareKitStore */,
+				1971FE12254676EA003A17E7 /* CareKitUI */,
+			);
 			productName = OKAERI;
 			productReference = 192CED1A253878C90087E38F /* OKAERI.app */;
 			productType = "com.apple.product-type.application";
@@ -254,6 +305,9 @@
 				Base,
 			);
 			mainGroup = 192CED11253878C90087E38F;
+			packageReferences = (
+				1971FE0B254676EA003A17E7 /* XCRemoteSwiftPackageReference "CareKit" */,
+			);
 			productRefGroup = 192CED1B253878C90087E38F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,11 +351,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1971FE312546FCAC003A17E7 /* TaskList.swift in Sources */,
+				194E021B2545C3CE00DBB1E6 /* AddTask.swift in Sources */,
 				192CED27253878CA0087E38F /* Persistence.swift in Sources */,
+				1971FE1F2546D579003A17E7 /* SceneDelegate.swift in Sources */,
 				192CED51253879A90087E38F /* HealthStore.swift in Sources */,
 				192CED20253878C90087E38F /* ContentView.swift in Sources */,
 				192CEDF5253C790A0087E38F /* Step.swift in Sources */,
 				192CED2A253878CA0087E38F /* OKAERI.xcdatamodeld in Sources */,
+				1971FE3925472253003A17E7 /* SelectTask.swift in Sources */,
+				1971FE042545C683003A17E7 /* TaskModel.swift in Sources */,
+				1971FE292546E5D2003A17E7 /* TaskRow.swift in Sources */,
+				1971FE242546D5A6003A17E7 /* AppDelegate.swift in Sources */,
 				192CED1E253878C90087E38F /* OKAERIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +691,40 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1971FE0B254676EA003A17E7 /* XCRemoteSwiftPackageReference "CareKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/carekit-apple/CareKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1971FE0C254676EA003A17E7 /* CareKitFHIR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1971FE0B254676EA003A17E7 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitFHIR;
+		};
+		1971FE0E254676EA003A17E7 /* CareKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1971FE0B254676EA003A17E7 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKit;
+		};
+		1971FE10254676EA003A17E7 /* CareKitStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1971FE0B254676EA003A17E7 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitStore;
+		};
+		1971FE12254676EA003A17E7 /* CareKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1971FE0B254676EA003A17E7 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		192CED28253878CA0087E38F /* OKAERI.xcdatamodeld */ = {
